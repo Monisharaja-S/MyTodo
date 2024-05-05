@@ -52,9 +52,41 @@ function App() {
 
 
   return (
-    <>
-     
-    </>
+    <div className='container'>
+    <h4 className="text-center">My Todo</h4>
+    <TodoForm
+      taskName={taskName}
+      setTaskName={setTaskName}
+      description={description}
+      setDescription={setDescription}
+      status={status}
+      setStatus={setStatus}
+      addTodo={addTodo}
+      editIndex={editIndex}
+    />
+    <div className="d-flex justify-content-between align-items-center ">
+      <div>
+        <h4 className="fw-bold content">My Todos</h4>
+      </div>
+      <div>
+        <h4 className="fw-bold">
+      Status Filter :  
+      <select className="btn btn-danger"  style={{marginLeft:'15px',borderRadius:'0px'}}value={filter} onChange={handleFilterChange}>
+        <option value="all">All</option>
+        <option value="not completed">Not Completed</option>
+        <option value="completed">Completed</option>
+      </select>
+      </h4>
+      </div>
+    </div>
+
+    <div className="row row-cols-1 row-cols-md-3 g-4 mt-5">
+
+    <TodoList todos={filteredTodos} deleteTodo={deleteTodo} editTodo={editTodo} />
+   
+  </div>
+  </div>
+  
   )
 }
 
