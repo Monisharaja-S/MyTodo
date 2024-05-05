@@ -2,6 +2,8 @@ import { useState } from 'react'
 
 import './App.css'
 import "bootstrap/dist/css/bootstrap.min.css"
+import TodoForm from './TodoForm';
+import TodoList from './TodoList';
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -79,11 +81,8 @@ function App() {
       </h4>
       </div>
     </div>
-
     <div className="row row-cols-1 row-cols-md-3 g-4 mt-5">
-
     <TodoList todos={filteredTodos} deleteTodo={deleteTodo} editTodo={editTodo} />
-   
   </div>
   </div>
   
