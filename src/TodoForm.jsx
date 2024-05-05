@@ -1,6 +1,6 @@
 import React from 'react'
 
-function TodoForm() {
+function TodoForm({ taskName, setTaskName, description, setDescription, addTodo, editIndex }) {
   const handleTaskNameChange = (event) => {
     setTaskName(event.target.value);
   };
