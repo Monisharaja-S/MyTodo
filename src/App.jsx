@@ -55,7 +55,7 @@ function App() {
 
   return (
     <div className='container'>
-    <h4 className="text-center">My Todo</h4>
+    <h4 className="text-center" style={{color:"green"}}>My Todo</h4>
     <TodoForm
       taskName={taskName}
       setTaskName={setTaskName}
